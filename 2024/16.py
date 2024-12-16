@@ -121,9 +121,10 @@ def main():
     for c in range(C):
       is_valid_tile = False
       for drc in directions:
-        if (r,c,drc) in costs_from_start and (r,c,drc) in costs_from_end:
+        rev_drc = reverse_direction(drc)
+        if (r,c,drc) in costs_from_start and (r,c,rev_drc) in costs_from_end:
           c1 = costs_from_start[(r,c,drc)]
-          c2 = costs_from_end[(r,c,reverse_direction(drc))]
+          c2 = costs_from_end[(r,c,rev_drc)]
           if c1 + c2 == best_cost:
             is_valid_tile = True
       if is_valid_tile:
