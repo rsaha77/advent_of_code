@@ -1,7 +1,6 @@
 import re
 import sys
 import time
-from heapq import heappush as hpush, heappop as hpop
 from collections import deque
 
 file = "in.txt"
