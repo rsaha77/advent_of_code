@@ -21,17 +21,17 @@ def prune (secret):
   return secret % 16777216
 
 
-def find_secret(secret, LIMIT):
-  secret_list = [secret]
+def find_secrets (secret, LIMIT):
+  secrets = [secret]
   for _ in range(LIMIT):
     secret = prune(mix(secret, secret * 64))
     secret = prune(mix(secret, secret // 32))
     secret = prune(mix(secret, secret * 2048))
-    secret_list.append(secret)
-  return secret_list
+    secrets.append(secret)
+  return secrets
 
 
-def get_seq_maxbanana_dict(secrets):
+def get_seq_banana_dict (secrets):
   bananas = [secret % 10 for secret in secrets]
 
   changes = [None]
@@ -49,17 +49,17 @@ def get_seq_maxbanana_dict(secrets):
 
 def main():
   ans1, ans2 = 0, 0
-  D = defaultdict(int)
   LIMIT = 2000
+  seq_tot_banana = defaultdict(int)
 
   for ln, line in enumerate(LINES):
-    secret_list = find_secret (int(line), LIMIT)
-    ans1 +=  secret_list[LIMIT]
-    seq_maxbanana_dict = get_seq_maxbanana_dict(secret_list)
-    for seq, max_banana in seq_maxbanana_dict.items():
-      D[seq] += max_banana
+    secrets = find_secrets (int(line), LIMIT)
+    ans1 +=  secrets[LIMIT]
+    seq_banana = get_seq_banana_dict (secrets)
+    for seq, banana in seq_banana.items():
+      seq_tot_banana[seq] += banana
 
-  ans2 = max(D.values())
+  ans2 = max(seq_tot_banana.values())
 
   
   print("p1: ", ans1)
