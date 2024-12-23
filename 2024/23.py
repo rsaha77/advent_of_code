@@ -2,25 +2,14 @@ import sys
 import networkx as nx
 from collections import deque, defaultdict, Counter
 
-
 file = "in.txt"
 try:
     file = sys.argv[1]
 except IndexError:
     pass
 
-
 inp = open(file).read().strip()
 LINES = inp.split("\n")
-
-
-def ins(r, c, R, C):
-  return 0 <= r < R and 0 <= c < C
-
-
-HV_DIR = [[-1, 0], [0, 1], [1, 0], [0, -1]] # ^, >, v, <
-DIAG_DIR = [[1, 1], [-1, -1], [-1, 1], [1, -1]]
-ALL_DIR = HV_DIR + DIAG_DIR
 
 
 def is_connected(a, b, c, d):
