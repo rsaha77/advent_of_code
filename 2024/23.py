@@ -20,11 +20,6 @@ def startswith_t(a,b,c):
   return a.startswith('t') or b.startswith('t') or c.startswith('t')
 
 
-def get_sorted(a,b,c):
-  x = [a,b,c]
-  return sorted(x)
-
-
 def find_max_clique(adj_set):
   G = nx.Graph(adj_set)
   max_clique = max(nx.find_cliques(G), key=len)
