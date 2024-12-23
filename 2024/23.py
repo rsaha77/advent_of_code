@@ -48,10 +48,12 @@ def main():
         if is_connected(a,b,c,g) and startswith_t(a,b,c):
           ans1 += 1
 
-  print("p1: ", ans1)
 
   max_clique = find_max_clique(g)
-  print("p2: ", ','.join(sorted(max_clique)))
+  ans2 = ','.join(sorted(max_clique))
+
+  print("p1: ", ans1)
+  print("p2: ", ans2)
 
 
 if __name__ == "__main__":
