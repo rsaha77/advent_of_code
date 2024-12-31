@@ -308,7 +308,7 @@ if __name__ == "__main__":
   main()
 
 # 156412136415172 is too low (N = 24)
-# 191139369248202
+# 191139369248202 (AC!)
 # 216789225827842 ??
 # 217914284523602 (WA)
 # 218917999117732 cannot
@@ -318,5 +318,4 @@ if __name__ == "__main__":
 # 361978551477642 (WA)
 # 376870341498810 is too high (It got better by choosing best path for dijkstra 2)
 # 401684331740594 is too high (N = 25)
-# 850486362348718 OOPS
 
