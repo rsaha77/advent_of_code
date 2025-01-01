@@ -152,7 +152,8 @@ def dijkstra_dir_kpad(sr, sc, er, ec, grid, R, C, dir_cost):
 
 # nxt = {} # next set of moves after ch1->ch2
 nxt = {'A^': '<A', '^^': 'A', '^<': 'v<A', '<A': '>>^A', 'A<': 'v<<A', 'AA': 'A', 'Av': '<vA', 'v<': '<A', 'A>': 'vA', '>>': 'A', '>^': '<^A', '^A': '>A', '<^': '>^A', '<<': 'A', '>A': '^A', 'v>': '>A', '<v': '>A', 'vA': '^>A', '>v': '<A', '^>': 'v>A', 'vv': 'A'}
-
+#The hardcoded value of nxt via dijkstra works for all inputs and is faster than DP with dijkstra
+#Ran it multiple times to get min for p1 and p2, and hence optimal nxt
 
 """
 Below is the best nxt found after getting the best_ans / correct_ans
@@ -210,8 +211,8 @@ def main():
   num_pad_cost = get_move_cost(num_kpad)
   dir_cost = get_move_cost(dir_kpad)
 
-  print_grid(num_kpad)
-  print_grid(dir_kpad)
+  # print_grid(num_kpad)
+  # print_grid(dir_kpad)
 
   best_ans1, best_ans2 = float('inf'), float('inf')
   ans1, ans2 = 0, 0
@@ -248,21 +249,13 @@ def main():
     best_ans1 = min(best_ans1, ans1)
     best_ans2 = min(best_ans2, ans2)
 
-  print("===========================================================")
-  print(nxt)
-  sorted_nxt = sorted(nxt.items(), key=lambda item: len(item[1]), reverse=True)
+  # print("===========================================================")
+  # sorted_nxt = sorted(nxt.items(), key=lambda item: len(item[1]), reverse=True)
+  # for k, v in sorted_nxt:
+  #   print(f"{k}: {v}")
 
-  # Print keys and values
-  for key, value in sorted_nxt:
-    print(f"{key}, {value}")
-
-  print("===========================================================")
   print("p1: ", best_ans1)
   print("p2: ", best_ans2)
-  print("===========================================================")
-  print("The hardcoded value of nxt via dijkstra works for all inputs and is faster than DP with dijkstra")
-  print("Ran it multiple times to get min for p1 and p2, and hence optimal nxt.")
-  print("===========================================================")
 
 if __name__ == "__main__":
   main()
