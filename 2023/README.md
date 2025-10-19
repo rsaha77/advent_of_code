@@ -16,9 +16,4 @@ This repository contains my **Advent of Code 2023** solutions.
 ## 📝 Highlights
 - A mix of **brute force, BFS, DFS, DP**, and other approaches.  
 - Personal notes on struggles and insights included in the code or comments.  
-- Not all days may have complete or clean solutions.  
-
----
-
-## 🔹 Contact / Connect
-- Open to discussions on problem-solving approaches and optimization techniques.  
+- Not all days may have complete or clean solutions. 
