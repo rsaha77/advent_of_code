@@ -1,0 +1,1 @@
+g++ -std=c++17 -o code aoc.cpp -DLOCAL && ./code

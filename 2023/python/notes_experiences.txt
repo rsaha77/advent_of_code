@@ -1,0 +1,4 @@
+Favs:
+
+Day 16:
+Check notes in 16.py file
