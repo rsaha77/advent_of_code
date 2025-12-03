@@ -9,7 +9,6 @@ def read_lines(fn):
 def solve(s, k):
   stk = []
   for i,ch in enumerate(s):
-    # print(f'{stk=} ---- {len(s[i:])+len(stk)=} ---- {s[i:]=}')
     num = int(ch)
     while stk and num > stk[-1] and len(s[i:])+len(stk) > k:
       stk.pop()
