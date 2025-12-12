@@ -1,12 +1,6 @@
 import sys
 from collections import defaultdict, Counter
 
-# print(sys.getrecursionlimit())
-# sys.setrecursionlimit(10000)
-
-#tr = list(map(list, zip(*G)))
-#tr = list(map(list, itertools.zip_longest(*grid, fillvalue=None))) #when one or more lists are empty, the above won't work
-
 file = "in.txt"
 try:
   file = sys.argv[1]
