@@ -17,7 +17,8 @@ This repository contains my solutions for Advent of Code 2025. I focussed on sol
 ---
 
 ### Day 2
-- **Part 2:** Used string algorithms. Example: `s == (s+s)[1:-1]` for checking rotations. Another one-liner that can be used: `s[:idx] * reps == s` for `idx` in `(1, mid)`.
+- **Part 2:** Used string algorithms. End of the day found a shortcut for p2 `s == (s+s)[1:-1]` for checking rotations. Updated the solution.
+- Another one-liner that can be used: `s[:idx] * reps == s` for `idx` in `(1, mid)`.
 
 ---
 
@@ -33,7 +34,7 @@ This repository contains my solutions for Advent of Code 2025. I focussed on sol
 ---
 
 ### Day 4
-- Grid neighbor-count
+- Straightforward grid neighbor-count
 
 ---
 
