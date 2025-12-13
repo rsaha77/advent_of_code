@@ -44,7 +44,7 @@ This repository contains my solutions for Advent of Code 2025. I focussed on sol
 ---
 
 ### Day 6
-- Column-wise parsing. Note: Sublime was stripping spaces, causing issues for part 2. Changed editor settings to preserve spaces.
+- Column-wise parsing. Sublime was stripping spaces, causing issues for part 2. Changed editor settings.
 
 ---
 
