@@ -23,7 +23,7 @@ This repository contains my solutions for Advent of Code 2025. I focussed on sol
 ---
 
 ### Day 3
-- **Part 2:** For long input lists, sort positions for each digit and use binary search to find the first occurrence. Other approaches:
+- **Part 2:** Verious approaches to solve this problem but the final algo selection depends on the constraints:
   - Naive greedy linear scan per digit: O(k * 10 * n)
   - Dynamic Programming (DP): O(n * k) time, O(n * k) space
   - Binary search with `bisect_left`: O(k * 10 * log n)
@@ -55,6 +55,7 @@ This repository contains my solutions for Advent of Code 2025. I focussed on sol
 
 ### Day 8
 - Connected components in a graph. Used DFS during contest, later refactored to Disjoint Set Union (DSU) for efficiency.
+- A min heap of size 3 can be used in part 1 to increase the efficiency
 
 ---
 
