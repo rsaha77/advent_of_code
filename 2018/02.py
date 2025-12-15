@@ -28,9 +28,9 @@ def main():
 
   p2 = None
   for line1, line2 in combinations(lines, 2):
-    is_same, comm = diff_one(line1, line2)
+    is_same, common = diff_one(line1, line2)
     if is_same:
-      p2 = comm
+      p2 = common
       break
 
   print("p1:", cnt2 * cnt3)
